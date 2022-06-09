@@ -17,12 +17,14 @@
 }
 .todolist {
     padding: 0.5rem;
+    border: 2px solid black;
     margin-bottom: 5px;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     color: black;
     background-color: bisque;
+    
 }
 i {
     cursor: pointer;
@@ -32,3 +34,12 @@ i {
     color: black;
     font-weight: bold;
 }
+/*.liste {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 10px;
+    text-align: center;
+    border: 1px solid red;
+    background-color: yellowgreen;
+} */
