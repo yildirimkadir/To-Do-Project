@@ -11,6 +11,7 @@ add.addEventListener("click", () => {
     } else {
         ul.innerHTML += `<li><div><i class="far fa-check-square"></i></div>${input.value.toUpperCase()}<div><i class="fa-solid fa-trash-can"></i></div></li>`;
         input.value ="";
+        input.focus();
         document.querySelectorAll("li").forEach((x) => {
         x.setAttribute("class", "todolist");
         });
@@ -25,12 +26,25 @@ add.addEventListener("click", () => {
 listeDiv.addEventListener("click", (event) => {
     if (event.target.classList.contains("fa-solid"))  {
         event.target.parentElement.parentElement.remove();
+         input.focus();
     }
     else if(event.target.classList.contains("far")) {
         event.target.style.color = "green"
         event.target.parentElement.parentElement.style.textDecoration = "line-through";
+         input.focus();
         
 }
         
 
 });
+
+input.addEventListener("keydown", (e) => {
+    if (e.keyCode === 13) {
+        add.click();
+    }
+});
+
+window.onload = () => {
+    input.focus();
+
+};
