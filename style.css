@@ -11,4 +11,23 @@
     justify-content: flex-start;
     align-items: center;
     font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    background-color: coral;
+    overflow: auto;
+}
+.todolist {
+    padding: 0.5rem;
+    margin-bottom: 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    background-color: bisque;
+}
+i {
+    cursor: pointer;
+}
+.btn {
+    color: black;
+    font-weight: bold;
 }
