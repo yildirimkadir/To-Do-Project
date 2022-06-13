@@ -34,6 +34,12 @@ i {
     color: black;
     font-weight: bold;
 }
+i.checked {
+    color: green;
+}
+li.checked {
+    text-decoration: line-through;
+}
 /*.liste {
     display: flex;
     justify-content: center;

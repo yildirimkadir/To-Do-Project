@@ -28,15 +28,26 @@ listeDiv.addEventListener("click", (event) => {
         event.target.parentElement.parentElement.remove();
          input.focus();
     }
-    else if(event.target.classList.contains("far")) {
-        event.target.style.color = "green"
-        event.target.parentElement.parentElement.style.textDecoration = "line-through";
-         input.focus();
+    if(event.target.classList.contains("far")) {
+        if (event.target.classList.contains("checked")) {
+            event.target.classList.remove("checked");
+            event.target.parentElement.parentElement.classList.remove("checked");
+            input.focus();
+            
+        } else {
+            event.target.classList.add("checked");
+            event.target.parentElement.parentElement.classList.add("checked");
+            input.focus();
+            
+        }
         
 }
         
 
 });
+
+
+
 
 input.addEventListener("keydown", (e) => {
     if (e.keyCode === 13) {
@@ -48,3 +59,4 @@ window.onload = () => {
     input.focus();
 
 };
+
